@@ -1,7 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const { port, dbURI } = require('./config/environment')
+const { dbURI } = require('./config/environment')
 
 const router = require('./config/router')
 const logger = require('./lib/logger')
@@ -17,6 +18,8 @@ mongoose.connect(
   }
 )
 
+app.use(express.static(`${__dirname}/dist`))
+
 app.use(bodyParser.json())
 
 app.use(logger)
@@ -25,6 +28,8 @@ app.use('/api', router)
 
 app.use(errorHandler)
 
-app.listen(port, () => console.log(`Port ${port} is up and running`))
+app.get('/*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
+
+app.listen(process.env.PORT, () => console.log(`Port ${process.env.PORT} is up and running`))
 
 module.exports = app

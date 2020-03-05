@@ -127,16 +127,6 @@ class Register extends React.Component {
           <div className="column is-quarter-desktop"></div>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
- 
     )
   }
 }
