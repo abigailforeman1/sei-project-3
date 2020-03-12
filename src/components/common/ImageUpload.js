@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-const cloudinaryUserKey = process.env.CLOUDINARY_USER_KEY
 
 class ImageUpload extends React.Component {
   state = {
@@ -9,10 +8,12 @@ class ImageUpload extends React.Component {
   }
 
   handleUpload = async ({ target: { files } }) => {
+    console.log('yeet')
     const data = new FormData
     data.append('file', files[0])
+    console.log(process.env.CLOUDINARY_USER_KEY)
     data.append('upload_preset', 'hmrrfxib') // this is your user key from your cloudinary account
-    const res = await axios.post(`https://api.cloudinary.com/v1_1/${cloudinaryUserKey}/image/upload`, data)
+    const res = await axios.post(`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_USER_KEY}/image/upload`, data)
     this.setState({ image: res.data.url, original: files[0].name }, () => {
       this.props.handleChangeImage({ target: { name: this.props.fieldName, value: res.data.url } }) 
     })
