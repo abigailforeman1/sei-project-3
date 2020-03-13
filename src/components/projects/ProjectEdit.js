@@ -41,7 +41,7 @@ class ProjectEdit extends React.Component{
       const res = await axios.put(`/api/projects/${this.props.match.params.id}`, { ...this.state.data }, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      console.log(res.data)
+      // console.log(res.data)
       this.props.history.push(`/projects/${res.data._id}`)
     } catch (err) {
       console.log(err)

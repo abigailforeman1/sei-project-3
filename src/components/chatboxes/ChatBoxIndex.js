@@ -15,7 +15,7 @@ class ChatBoxIndex extends React.Component {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
       this.setState({ you: res.data })
-      console.log('you=', this.state.you)
+      // console.log('you=', this.state.you)
 
     } catch (err) {
       console.log(err)
@@ -30,10 +30,10 @@ class ChatBoxIndex extends React.Component {
   render() {
     const { you } = this.state
     if (!you._id) return null
-    console.log('you =', you)
+    // console.log('you =', you)
     const { chats } = this.state.you
-    console.log('chats =', chats)
-    console.log('chats.length =', chats.length)
+    // console.log('chats =', chats)
+    // console.log('chats.length =', chats.length)
     // if (chats.length) return null
     return (
       <section className="is-fullheight-with-navbar section_padding">

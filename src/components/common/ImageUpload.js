@@ -8,12 +8,8 @@ class ImageUpload extends React.Component {
   }
 
   handleUpload = async ({ target: { files } }) => {
-    console.log('yeet')
     const data = new FormData
     data.append('file', files[0])
-    console.log(process.env.CLOUDINARY_USER_KEY)
-    console.log(process.env.PORT)
-    console.log(process.env.MONGODB_URI)
     data.append('upload_preset', 'j7lqzji3') // this is your user key from your cloudinary account
     const res = await axios.post(`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_USER_KEY}/image/upload`, data)
     this.setState({ image: res.data.url, original: files[0].name }, () => {

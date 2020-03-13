@@ -16,7 +16,7 @@ function create(req, res) {
     .create(req.body)
     // .populate('members')
     .then(createdChatBox => {
-      console.log(req.body)
+      // console.log(req.body)
       return res.status(202).json(createdChatBox)
     })
     .catch(err => res.status(400).json(err))

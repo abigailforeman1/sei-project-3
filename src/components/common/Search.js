@@ -71,7 +71,7 @@ class Search extends React.Component {
 
   // this is handling the change in the first checkbox form (looking for creatives/users)
   handleChange = ({ target: { name, value, checked, type } },stateType) => {
-    console.log(name)
+    // console.log(name)
     const newValue = type === 'checkbox' ? checked : value
     const newData = { ...this.state[stateType], [name]: newValue }
     this.setState({ [stateType]: newData })
@@ -88,7 +88,7 @@ class Search extends React.Component {
 
   render() {
     const { formData, projectForm, userForm } = this.state
-    console.log(this.state.formData.lookingFor)
+    // console.log(this.state.formData.lookingFor)
 
     return (
       <>
@@ -277,11 +277,6 @@ class Search extends React.Component {
           {/* </div> */}
         </section>
       </>
-       
-
-
-
-
     )
   }
 

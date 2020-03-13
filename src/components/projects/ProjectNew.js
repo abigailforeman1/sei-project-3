@@ -34,7 +34,7 @@ class ProjectNew extends React.Component{
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(this.state.data)
+    // console.log(this.state.data)
     try {
       const res = await axios.post('/api/projects', { ...this.state.data }, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
@@ -52,7 +52,7 @@ class ProjectNew extends React.Component{
   }
 
   render() {
-    console.log(this.state.data)
+    // console.log(this.state.data)
     return (
       <ProjectForm
         handleChange={this.handleChange}

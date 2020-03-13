@@ -16,7 +16,7 @@ class UserShow extends React.Component {
     try {
       const res = await axios.get(`/api/users/${currentUsername}`)
       this.setState({ user: res.data })
-      console.log('them=', this.state.user)
+      // console.log('them=', this.state.user)
     } catch (err) {
       console.log(err)
     }
@@ -28,7 +28,7 @@ class UserShow extends React.Component {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
       this.setState({ you: res.data })
-      console.log('you=', this.state.you)
+      // console.log('you=', this.state.you)
 
     } catch (err) {
       console.log(err)
@@ -49,7 +49,7 @@ class UserShow extends React.Component {
   isOwner = () => Auth.getPayload().sub === this.state.user._id
 
   handleLike = async (e) => {
-    console.log(this.state)
+    // console.log(this.state)
     try {
       const res = await axios.get(`/api/users/${this.props.match.params.username}/skills/${e.target.getAttribute('name')}/like`, {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
@@ -70,7 +70,7 @@ class UserShow extends React.Component {
       this.props.history.push(`/users/${arr2[0].owner}/chatboxes/${arr2[0]._id}`)
     } else {
       try {
-        console.log('trying to creat a chat')
+        // console.log('trying to creat a chat')
         const res = await axios.post(`/api/users/${theirId}/chatboxes`, { }, {
           headers: { Authorization: `Bearer ${Auth.getToken()}` }
         })

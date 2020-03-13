@@ -21,9 +21,9 @@ class Login extends React.Component {
     
     try {
       const res = await axios.post('/api/login', this.state.data)
-      console.log(res.data)
+      // console.log(res.data)
       Auth.setToken(res.data.token), console.log('token =', res.data.token)
-      console.log(res.data.firstLogin)
+      // console.log(res.data.firstLogin)
       if (res.data.firstLogin) {
         this.props.history.push('/getstarted')
       } else {

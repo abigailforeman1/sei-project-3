@@ -60,7 +60,7 @@ function like(req, res) {
     .populate('createdProjects')
     .populate('collaboratedProjects')
     .then(user => {
-      console.log(user)
+      // console.log(user)
       if (!user) return res.status(404).json({ message: 'Not Found ' })
       if (req.currentUser._id.toString() === user._id.toString()) return res.status(401).json({ message: 'Unauthorized' })
       const skill = user.skills.id(req.params.skill)

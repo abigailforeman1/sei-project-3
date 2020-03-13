@@ -26,7 +26,7 @@ class ProjectShow extends React.Component {
     try {
       const res = await axios.get(`/api/projects/${projectId}`)
       this.setState({ project: res.data })
-      console.log('project =', this.state.project)
+      // console.log('project =', this.state.project)
     } catch (err) {
       console.log(err)
     }
@@ -149,7 +149,7 @@ class ProjectShow extends React.Component {
   toggleMessageBoard = async (e) => {
     this.setState({ showMessages: !this.state.showMessages })
     // console.log('show messages =', this.state.showMessages)
-    console.log(e.target.value)
+    // console.log(e.target.value)
   }
 
   handleEditSelected = (commentId, commentText) => {
@@ -200,9 +200,9 @@ class ProjectShow extends React.Component {
 
   render() {
     const { project } = this.state
-    console.log(project.images)
+    // console.log(project.images)
     if (!project._id) return null
-    console.log(project)
+    // console.log(project)
     // console.log('collabs included? =', this.state.project.collaborators.map(collab => collab._id === Auth.getPayload().sub))
     return (
       <section style={{

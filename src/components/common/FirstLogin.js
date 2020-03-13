@@ -15,7 +15,7 @@ class FirstLogin extends React.Component{
       const res = await axios('/api/myportfolio', {
         headers: { Authorization: `Bearer ${Auth.getToken()}` }
       })
-      console.log(res.data.firstLogin)
+      // console.log(res.data.firstLogin)
       // if (!res.data.firstLogin) this.props.history.push('/discovery')
       this.setState({ name: res.data.name, username: res.data.username })
     } catch (err) {

@@ -16,8 +16,8 @@ class Register extends React.Component {
     const data = { ...this.state.data, [e.target.name]: e.target.value }
     const errors = { ...this.state.errors, [e.target.name]: '' }
     this.setState({ data, errors })
-    console.log('const data =', data)
-    console.log('state =', this.state.data)
+    // console.log('const data =', data)
+    // console.log('state =', this.state.data)
   }
   handleSubmit = async e => {
     e.preventDefault()
@@ -36,7 +36,7 @@ class Register extends React.Component {
     }
   }
   render() {
-    console.log('errors=', this.state.errors)
+    // console.log('errors=', this.state.errors)
     return (
       <section className="is-fullheight-with-navbar hero section_padding">
         <div className="hero-body columns is-fullwidth">
