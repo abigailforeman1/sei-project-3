@@ -50,9 +50,25 @@ Beehive is a creative collaboration website that allows users within the creativ
 
 1. Homepage, register & login
 
-The landing page of our website shows the Beehive logo and buttons to register for an account or start discovering creatives and/or projects. 
+The landing page of our website shows the Beehive logo with a button to register and a button to start discovering creatives and projects. They can also use the 'start your journey' link in the navbar which takes them to the main search page. We wanted to give an unregistered user enough functionality to show them what Beehive is all about and encourage them to register for an account. Once a user registers, they are taken directly to the login page. When they log in for the first time the user will see a unique welcome page with extra informayion to improve their experience of our site.
 
 ![video of homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehive2.gif)
+
+![screenshot of the beehive register page](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehiveregister.png)
+
+2. Search page 
+
+One of the main features of Beehive is the dynamic search page. Here users are able to specify exactly what they are looking for on the left side of the site and results fitting this criteria get filtered down and displayed on the right side. 
+
+![screenshot of the beehive search page](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehivesearch.png)
+
+3. Profile page - edit profile
+
+4. Project page - add new project
+
+5. Chat feature - use johns pic
+
+6. Collaboration requests
 
 ## Challenges and future improvements:
 
