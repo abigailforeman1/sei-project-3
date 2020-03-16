@@ -41,7 +41,7 @@ $ yarn start
 ```
 
 ## Brief:
-In groups of 4 we had 8 days to plan, build, style and test a full-stack application. This included a React frontend that communicated with our backend express API built with MongoDB. We also had to write automated tests for at least one RESTful resource on the back-end.
+In groups of 4 we had to plan, build, style and test a full-stack MERN application. This included a React frontend that communicated with our backend express API built with MongoDB. We also had to write automated tests for at least one RESTful resource on the back-end.
 
 This was my third project while on General Assembly’s SEI course.
 
@@ -54,7 +54,7 @@ Beehive is a creative collaboration website that allows users within the creativ
 
 The landing page of our website shows the Beehive logo and buttons to register for an account or start discovering creatives and/or projects. 
 
-![video of homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehivescreenrecording.png)
+![video of homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehive.gif)
 
 ## Challenges and future improvements:
 
