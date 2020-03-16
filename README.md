@@ -45,8 +45,6 @@ In groups of 4 we had to plan, build, style and test a full-stack MERN applicati
 
 This was my third project while on General Assembly’s SEI course.
 
-![screenshot of Beehive homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehive.png)
-
 ## User experience:
 Beehive is a creative collaboration website that allows users within the creative industry to register for an account, create a personal profile, upload projects they are working on, search for other creatives, request to collaborate on projects and chat with other users. We took heavy inspiration for this project from [The Dots](https://the-dots.com/) which is a website I have used for a number of years. 
 
@@ -54,7 +52,7 @@ Beehive is a creative collaboration website that allows users within the creativ
 
 The landing page of our website shows the Beehive logo and buttons to register for an account or start discovering creatives and/or projects. 
 
-![video of homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehive.gif)
+![video of homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehive2.gif)
 
 ## Challenges and future improvements:
 
