@@ -3,7 +3,7 @@
 # General Assembly Project 3: Beehive
 
 ## Goal:
-Build a full-stack application that has a React front-end and uses an Express API to serve your data from a Mongo database. Also write automated tests for at least one RESTful resource on the back-end.
+Build a full-stack application with React and an Express API.
 
 ## Timeframe:
 8 days
@@ -39,4 +39,12 @@ $ yarn
 $ yarn start
 <!-- Check the console for any issues and if there are check the package.json for any dependancies missing  -->
 ```
+
+## Brief:
+In groups of 4 we had 8 days to plan, build, style and test a full-stack application. This included a React frontend that communicated with our backend express API built with MongoDB. We also had to write automated tests for at least one RESTful resource on the back-end.
+
+This was my third project while on General Assembly’s SEI course.
+
+![screenshot of Beehive homepage](https://github.com/abigailforeman1/sei-project-2/blob/master/src/assets/cocktailclub.png)
+
 
