@@ -88,15 +88,128 @@ When a user requests to join a project or add a user to their own project it sen
 
 ## My contributions
 
-# Planning & styling
+1. Planning & styling
 
-I was in charge of planning the front end of the site and drew wireframe sketches to help organise what features would go where. I also created the visual identity of the website in Adobe Illustrator for the team to follow. This sped up styling considerably and meant we had more time for testing and adding our 'nice to haves'.
+I was in charge of planning the front end of the site and drew wireframe sketches to help organise what features would go where and what api endpoints we needed. I also created the visual identity of the website in Adobe Illustrator for the team to follow. This sped up styling considerably and meant we had more time for testing and adding our 'nice to haves'.
 
 ![screenshot of sketches](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/planning.png)
 
 ![screenshot of design](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/design.png)
 
+2. Backend project & user models
 
+I built the backend models for both user and project using Mongoose Schema. This involved creating fields to store users skills and professions that were stored as an array in the project environment and building virtual schemas for likes, comments and project requests.
+
+```javascript
+const likeSchema = new mongoose.Schema({
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+}, {
+  timestamps: true
+})
+
+const projectSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  collaborators: [{ type: mongoose.Schema.ObjectId, ref: 'User' }],
+  description: { type: String, required: true },
+  location: { type: String },
+  images: [{ type: String }],
+  completed: { type: Boolean, required: true },
+  recruiting: { type: Boolean, required: true },
+  skillsInvolved: [{ type: String, enum: skills }],
+  lookingFor: [{ type: String, enum: professions }], 
+  likes: [ likeSchema ],
+  comments: [ commentSchema ],
+  messages: [ messageSchema ]
+}, {
+  timestamps: true
+})
+
+projectSchema
+  .virtual('likeCount')
+  .get(function() {
+    return this.likes.length
+  })
+  ```
+
+3. Better error handling 
+
+I added a function for better error handling to be able to troubleshoot our bugs more easily. This utilised an if statement to check the error name being delivered and returned a custom error message.
+
+```javascript
+function errorHandler(err, req, res, next) {
+  if (err.name === 'ValidationError') {
+    const customErrors = {}
+
+    for (const key in err.errors) { 
+      customErrors[key] = err.errors[key].message 
+    }
+
+    return res.status(422).json({ message: 'Unprocessable Entity', errors: customErrors })
+  }
+
+  if (err.message === 'Not Found') {
+    return res.status(404).json({ message: 'Not Found' })
+  }
+
+  res.status(500).json({ message: 'Internal Server Error' })
+  next(err)
+}
+```
+
+4. Image upload component
+
+I created a custom frontend image upload React component that we imported into 2 areas of the project - for user profile image and project hero image. This was linked to my Cloudinary account with a user key which was stored in a .env file. The component worked by setting state with the cloudinary URL from the uploaded image, then invoking the handleChangeImage prop function in the parent component with the image data as its arguments.
+
+```javascript
+  handleUpload = async ({ target: { files } }) => {
+    const data = new FormData
+    data.append('file', files[0])
+    data.append('upload_preset', 'j7lqzji3')
+    const res = await axios.post(`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_USER_KEY}/image/upload`, data)
+    this.setState({ image: res.data.url, original: files[0].name }, () => {
+      this.props.handleChangeImage({ target: { name: this.props.fieldName, value: res.data.url } }) 
+    })
+  }
+```
+
+5. Frontend show pages 
+
+I built out the frontend show pages for the user and project. This involved making a get request to the database for the correct information and displaying it in the most streamlined and clean way. 
+
+```javascript
+  <div className="column is-one-quarter">
+    <div className="container">
+      <div className="has-text-centered">
+        <img className="profile-img" src={user.profileImage} />
+      </div>
+      <div className="has-text-centered add-margin">
+        {this.isOwner() && <Link className="button" to={'/myportfolio/edit'}>Edit Portfolio</Link>}
+        {!this.isOwner() && <button className="button" onClick={this.handleMessage}>Message {user.name}</button>}
+      </div>
+    </div>
+  </div>
+
+  <div className="column">
+    <div className="columns">
+      <div className="column is-three-quarters">
+        <div className="subtitle-hero">
+          <h1>{user.name}</h1>
+        </div>
+        <ul className="profession-parent">{user.professions.map(profession =>
+          <li className="user-profession profession-grey-box" key={profession}>{profession}</li>)}
+        </ul>
+      </div>
+      <div className="column">
+        <div className="rounded-box">
+          <p className="has-text-centered">{user.location}</p>
+        </div>
+        <div className="rounded-box">
+          <p className="has-text-centered">{user.level}</p>
+        </div>
+      </div>
+    </div>
+```
 
 ## Challenges and future improvements:
 
