@@ -213,6 +213,6 @@ I built out the frontend show pages for the user and project. This involved maki
 
 ## Challenges and future improvements:
 
-- 
-- css framework 
+One of the biggest challenges was the management of the project and everyones ideas. We were all excited about the project which was amazing but we did have to be very realistic and strict about what features went into the app and which went into the 'icebox'. I haven't worked on a coding project of this scale before so it was a great experience in team work and prioritising. Due to our productivity and team cohesion, we were able to add some of our 'nice to haves' to the project in the last few days.
 
+Another challenge that came up was with CSS frameworks. We planned to use Tailwind to style our app as we wanted to try something new, however, we underestimated the time that was required to get to grips with it. We then looked into Skeleton but had the same issue and so unanimously decided to use Bulma as we are comfortable with it. Once we customised Bulma's default settings we had enough flexibilty to make it look how we wanted.  
