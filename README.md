@@ -88,6 +88,16 @@ When a user requests to join a project or add a user to their own project it sen
 
 ## My contributions
 
+# Planning & styling
+
+I was in charge of planning the front end of the site and drew wireframe sketches to help organise what features would go where. I also created the visual identity of the website in Adobe Illustrator for the team to follow. This sped up styling considerably and meant we had more time for testing and adding our 'nice to haves'.
+
+![screenshot of sketches](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/planning.png)
+
+![screenshot of design](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/design.png)
+
+
+
 ## Challenges and future improvements:
 
 
