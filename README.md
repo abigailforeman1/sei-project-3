@@ -27,7 +27,7 @@ Build a full-stack application with React and an Express API.
 * Cloudinary
 
 ## Deployment:
-This game has been deployed on Heroku and can be found here: https://beehive-project-3.herokuapp.com/
+This app has been deployed on Heroku and can be found here: https://beehive-project-3.herokuapp.com/
 
 ## Getting started:
 Use the clone button to download the source code. In the terminal enter the following commands:
