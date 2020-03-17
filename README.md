@@ -50,7 +50,7 @@ Beehive is a creative collaboration website that allows users within the creativ
 
 1. Homepage, register & login
 
-The landing page of our website shows the Beehive logo with a button to register and a button to start discovering creatives and projects. They can also use the 'start your journey' link in the navbar which takes them to the main search page. We wanted to give an unregistered user enough functionality to show them what Beehive is all about and encourage them to register for an account. Once a user registers, they are taken directly to the login page. When they log in for the first time the user will see a unique welcome page with extra informayion to improve their experience of our site.
+The landing page of our website allows uers to register or start discovering creatives and projects. They can also use the 'start your journey' link in the navbar which takes them to the main search page. We wanted to give an unregistered user enough functionality to show them what Beehive is all about and encourage them to register for an account. Once a user registers, they are taken directly to the login page. When they log in for the first time the user will see a unique welcome page with extra informayion to improve their experience of our site.
 
 ![video of homepage](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehive2.gif)
 
@@ -70,7 +70,7 @@ Every user gets their own portfolio page once they register to Beehive. This sho
 
 4. Project page
 
-Each project has its own page where users can like, comment and request to join the project/add other users by clicking on the white cross button. A user is not added to the project until the request has been accepted. Users are also able to enter a private collaborator message board if they are already part of the project and edit a project if they are the owner. When a user uploads their own project they are able to select if they are looking for collaborators and with what skills.
+Each project has its own page where users can like, comment and request to join the project/add other users. Users are also able to enter a private collaborator message board if they are already part of the project and edit a project if they are the owner. When a user uploads their own project they are able to select if they are looking for collaborators and specify what skills are needed.
 
 ![screenshot of the user profile page](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/project.png)
 
@@ -81,6 +81,10 @@ Logged in users can leave a message to any other user on Beehive by clicking the
 ![screenshot of the messaging](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/chat.png)
 
 6. Collaboration requests
+
+When a user requests to join a project or add a user to their own project it sends a request notification to be accepted or rejected by the other user. Once accepted, the project will then appear on the users portfolio page.
+
+![screenshot of requests](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/requests.png)
 
 ## My contributions
 
