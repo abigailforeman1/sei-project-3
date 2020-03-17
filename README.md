@@ -46,7 +46,7 @@ In groups of 4 we had to plan, build, style and test a full-stack MERN applicati
 This was my third project while on General Assembly’s SEI course.
 
 ## User experience:
-Beehive is a creative collaboration website that allows users within the creative industry to register for an account, create a personal profile, upload projects they are working on, search for other creatives, request to collaborate on projects and chat with other users. We took heavy inspiration for this project from [The Dots](https://the-dots.com/) which is a website I have used for a number of years. 
+Beehive is a creative collaboration website that allows users within the creative industry to register for an account, create a personal portfolio, upload projects they are working on, search for other creatives, request to collaborate on projects and chat with other users. We took heavy inspiration for this project from [The Dots](https://the-dots.com/) which is a website I have used for a number of years. 
 
 1. Homepage, register & login
 
@@ -62,13 +62,27 @@ One of the main features of Beehive is the dynamic search page. Here users are a
 
 ![screenshot of the beehive search page](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/beehivesearch.png)
 
-3. Profile page - edit profile
+3. Portfolio page
 
-4. Project page - add new project
+Every user gets their own portfolio page once they register to Beehive. This shows information about their skills, experience, projects and personal information. Logged in users are able to endorse other users skills and leave them a message in the chat feature. When a user is logged in they will also see an edit button on their own portfolio where they can change information currently stored in our database.
 
-5. Chat feature - use johns pic
+![screenshot of the user profile page](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/profilepage.png)
+
+4. Project page
+
+Each project has its own page where users can like, comment and request to join the project/add other users by clicking on the white cross button. A user is not added to the project until the request has been accepted. Users are also able to enter a private collaborator message board if they are already part of the project and edit a project if they are the owner. When a user uploads their own project they are able to select if they are looking for collaborators and with what skills.
+
+![screenshot of the user profile page](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/project.png)
+
+5. Chat feature
+
+Logged in users can leave a message to any other user on Beehive by clicking the message button on their porfolio. When the messaged user next logs in they will recieve a notification in their mail.
+
+![screenshot of the messaging](https://github.com/abigailforeman1/sei-project-3/blob/master/src/assets/chat.png)
 
 6. Collaboration requests
+
+## My contributions
 
 ## Challenges and future improvements:
 
