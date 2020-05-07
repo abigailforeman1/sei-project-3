@@ -211,6 +211,19 @@ I built out the frontend show pages for the user and project. This involved maki
     </div>
 ```
 
+## Key learnings:
+1. The importance of communicating 
+
+Working on a large project that moved at such a quick pace required every team member to communicate regularly about what part of the project they were working on. We got into the habbit of this after a few days and managed to keep merge conflicts to a minimum. 
+
+2. Styling a larger scale project
+
+Leading a group with styling on a project with many pages and small detailed components was not an easy task! I definitely learnt that creating a house style early on in the week helped to keep everyone on the same path and led to less decision making later on in the project.
+
+3. Building autonomous reusable components 
+
+This is a great way to save space and time in your project and keeps your code super slick and tidy! 
+
 ## Challenges and future improvements:
 
 One of the biggest challenges was the management of the project and everyones ideas. We were all excited about the project which was amazing but we did have to be very realistic and strict about what features went into the app and which went into the 'icebox'. I haven't worked on a coding project of this scale before so it was a great experience in team work and prioritising. Due to our productivity and team cohesion, we were able to add some of our 'nice to haves' to the project in the last few days.
